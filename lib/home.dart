@@ -288,73 +288,89 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             // beranda
-            Container(
-              height: 100,
-              child: Column(
-                children: [
-                  Container(
-                    height: 70,
-                    child: Icon(
-                      Icons.home,
-                      size: 70,
-                    ),
-                  ),
-                  Container(
-                    child: Text(
-                      "Beranda",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+            GestureDetector(
+              child: Container(
+                height: 100,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 70,
+                      child: Icon(
+                        Icons.home,
+                        size: 70,
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      child: Text(
+                        "Beranda",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
+              onTap: () {
+                // TODO: navigate this
+              },
             ),
             // berita
-            Container(
-              height: 100,
-              child: Column(
-                children: [
-                  Container(
-                    height: 70,
-                    child: Icon(
-                      Icons.newspaper,
-                      size: 70,
-                    ),
-                  ),
-                  Container(
-                    child: Text(
-                      "Berita",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+            GestureDetector(
+              child: Container(
+                height: 100,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 70,
+                      child: Icon(
+                        Icons.newspaper,
+                        size: 70,
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      child: Text(
+                        "Berita",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
+              onTap: () {
+                // TODO: navigate this
+              },
             ),
+
             // profil
-            Container(
-              height: 100,
-              child: Column(
-                children: [
-                  Container(
-                    height: 70,
-                    child: Icon(
-                      Icons.person,
-                      size: 70,
-                    ),
-                  ),
-                  Container(
-                    child: Text(
-                      "Profil",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+            GestureDetector(
+              child: Container(
+                height: 100,
+                child: Column(
+                  children: [
+                    Container(
+                      height: 70,
+                      child: Icon(
+                        Icons.person,
+                        size: 70,
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      child: Text(
+                        "Profil",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
+              onTap: () {
+                // TODO: navigate this
+              },
             ),
           ],
         ),
