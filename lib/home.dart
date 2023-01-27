@@ -1,4 +1,5 @@
 import 'package:academic/ambik_krs.dart';
+import 'package:academic/utils/footer.dart';
 import 'package:flutter/material.dart';
 import 'package:academic/jadwal_kuliah.dart';
 
@@ -313,101 +314,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Theme.of(context).backgroundColor,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            // beranda
-            GestureDetector(
-              child: Container(
-                height: 100,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 70,
-                      child: Icon(
-                        Icons.home,
-                        size: 70,
-                      ),
-                    ),
-                    Container(
-                      child: Text(
-                        "Beranda",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              onTap: () {
-                // TODO: navigate this
-              },
-            ),
-            // berita
-            GestureDetector(
-              child: Container(
-                height: 100,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 70,
-                      child: Icon(
-                        Icons.newspaper,
-                        size: 70,
-                      ),
-                    ),
-                    Container(
-                      child: Text(
-                        "Berita",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              onTap: () {
-                // TODO: navigate this
-              },
-            ),
-
-            // profil
-            GestureDetector(
-              child: Container(
-                height: 100,
-                child: Column(
-                  children: [
-                    Container(
-                      height: 70,
-                      child: Icon(
-                        Icons.person,
-                        size: 70,
-                      ),
-                    ),
-                    Container(
-                      child: Text(
-                        "Profil",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              onTap: () {
-                // TODO: navigate this
-              },
-            ),
-          ],
-        ),
-      ),
+      bottomNavigationBar: footer(context),
     );
   }
 }

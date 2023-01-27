@@ -1,3 +1,4 @@
+import 'package:academic/utils/footer.dart';
 import 'package:flutter/material.dart';
 
 var listMatkul = [
@@ -88,6 +89,7 @@ class _AmbilKrsState extends State<AmbilKrs> {
     });
 
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       body: Container(
         child: ListView(
           children: [
@@ -176,6 +178,7 @@ class _AmbilKrsState extends State<AmbilKrs> {
           ],
         ),
       ),
+      bottomNavigationBar: footer(context, name: this._name),
     );
   }
 }
