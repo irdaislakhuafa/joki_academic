@@ -1,3 +1,4 @@
+import 'package:academic/home.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -11,6 +12,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _key = GlobalKey<FormState>();
   var _securedPassword = true;
+  String _username = "";
 
   @override
   Widget build(BuildContext context) {
@@ -94,6 +96,11 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
+                onChanged: (value) {
+                  setState(() {
+                    this._username = value;
+                  });
+                },
               ),
             ),
 
@@ -156,6 +163,14 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   onPressed: () {
                     // TODO: navigate this
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePage(
+                          name: _username.toUpperCase(),
+                        ),
+                      ),
+                    );
                   },
                   child: Container(
                     alignment: Alignment.center,
