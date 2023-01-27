@@ -1,3 +1,4 @@
+import 'package:academic/ambik_krs.dart';
 import 'package:flutter/material.dart';
 import 'package:academic/jadwal_kuliah.dart';
 
@@ -141,7 +142,9 @@ class _HomePageState extends State<HomePage> {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return JadwalKuliah();
+                                return JadwalKuliah(
+                                  name: this._name,
+                                );
                               },
                             ),
                           );
@@ -174,29 +177,43 @@ class _HomePageState extends State<HomePage> {
                       ),
 
                       // ambil krs
-                      Container(
-                        margin: EdgeInsets.only(top: 30),
-                        child: Column(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                color: Theme.of(context).backgroundColor,
-                              ),
-                              height: 150,
-                              child:
-                                  Image.asset("assets/images/unirow_logo.png"),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return AmbilKrs(
+                                  name: this._name,
+                                );
+                              },
                             ),
-                            Container(
-                              margin: EdgeInsets.only(top: 10),
-                              child: Text(
-                                "Ambil KRS",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
+                          );
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(top: 30),
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).backgroundColor,
+                                ),
+                                height: 150,
+                                child: Image.asset(
+                                    "assets/images/unirow_logo.png"),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  "Ambil KRS",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
