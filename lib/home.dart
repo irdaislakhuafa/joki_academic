@@ -324,7 +324,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     child: Text(
-                      "Beranda",
+                      "Berita",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -347,7 +347,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     child: Text(
-                      "Beranda",
+                      "Profil",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
