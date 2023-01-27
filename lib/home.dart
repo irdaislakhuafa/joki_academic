@@ -160,8 +160,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Theme.of(context).backgroundColor,
                                 ),
                                 height: 150,
-                                child: Image.asset(
-                                    "assets/images/unirow_logo.png"),
+                                child: Image.asset("assets/images/jadwal.png"),
                               ),
                               Container(
                                 margin: EdgeInsets.only(top: 10),
@@ -201,8 +200,7 @@ class _HomePageState extends State<HomePage> {
                                   color: Theme.of(context).backgroundColor,
                                 ),
                                 height: 150,
-                                child: Image.asset(
-                                    "assets/images/unirow_logo.png"),
+                                child: Image.asset("assets/images/krs.png"),
                               ),
                               Container(
                                 margin: EdgeInsets.only(top: 10),
@@ -233,8 +231,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Theme.of(context).backgroundColor,
                               ),
                               height: 150,
-                              child:
-                                  Image.asset("assets/images/unirow_logo.png"),
+                              child: Image.asset("assets/images/khs.png"),
                             ),
                             Container(
                               margin: EdgeInsets.only(top: 10),
@@ -260,8 +257,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Theme.of(context).backgroundColor,
                               ),
                               height: 150,
-                              child:
-                                  Image.asset("assets/images/unirow_logo.png"),
+                              child: Image.asset("assets/images/dosen.png"),
                             ),
                             Container(
                               margin: EdgeInsets.only(top: 10),
@@ -291,8 +287,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Theme.of(context).backgroundColor,
                               ),
                               height: 150,
-                              child:
-                                  Image.asset("assets/images/unirow_logo.png"),
+                              child: Image.asset("assets/images/absen.png"),
                             ),
                             Container(
                               margin: EdgeInsets.only(top: 10),
