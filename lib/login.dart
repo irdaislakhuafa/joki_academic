@@ -147,23 +147,28 @@ class _LoginPageState extends State<LoginPage> {
 
             // login button
             Container(
-              margin: EdgeInsets.only(left: 55, right: 55, top: 20),
-              decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
-                borderRadius: BorderRadius.circular(40),
-              ),
-              child: Container(
-                alignment: Alignment.center,
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  "Login",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
+                margin: EdgeInsets.only(left: 55, right: 55, top: 20),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(40),
+                    )),
                   ),
-                ),
-              ),
-            ),
+                  onPressed: () {
+                    // TODO: navigate this
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(20),
+                    child: Text(
+                      "Login",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                      ),
+                    ),
+                  ),
+                )),
 
             // lupa password
             Container(
