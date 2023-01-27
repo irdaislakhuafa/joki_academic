@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:academic/jadwal_kuliah.dart';
 
 class HomePage extends StatefulWidget {
   String? name = null;
+  String? npm = null;
 
-  HomePage({super.key, this.name});
+  HomePage({super.key, this.name, this.npm});
 
   @override
   State<StatefulWidget> createState() {
     var state = _HomePageState();
     state._name = this.name;
+    state._npm = this.npm;
     return state;
   }
 }
 
 class _HomePageState extends State<HomePage> {
   String? _name = null;
+  String? _npm = null;
 
   @override
   Widget build(BuildContext context) {
@@ -131,29 +135,41 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       // jadwal kuliah
-                      Container(
-                        margin: EdgeInsets.only(top: 30),
-                        child: Column(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(20),
-                              decoration: BoxDecoration(
-                                color: Theme.of(context).backgroundColor,
-                              ),
-                              height: 150,
-                              child:
-                                  Image.asset("assets/images/unirow_logo.png"),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return JadwalKuliah();
+                              },
                             ),
-                            Container(
-                              margin: EdgeInsets.only(top: 10),
-                              child: Text(
-                                "Jadwal Kuliah",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
+                          );
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(top: 30),
+                          child: Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context).backgroundColor,
+                                ),
+                                height: 150,
+                                child: Image.asset(
+                                    "assets/images/unirow_logo.png"),
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(top: 10),
+                                child: Text(
+                                  "Jadwal Kuliah",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
 
