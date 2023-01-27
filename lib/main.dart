@@ -1,3 +1,4 @@
+import 'package:academic/login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,6 +9,7 @@ void main() {
         backgroundColor: const Color.fromARGB(255, 183, 230, 244),
         accentColor: const Color.fromARGB(255, 79, 101, 162),
       ),
+      home: LoginPage(),
     ),
   );
 }
